@@ -6,6 +6,10 @@ if [ ! -f $HOME/.dark-theme-app-list ]; then
 fi
 
 while read class_name; do
+    if ! type "xdotool" &> /dev/null; then
+        echo "This script requires xdotool."
+        exit
+    fi
     classes=$(xdotool search --class "$class_name")
     while IFS= read -r window_id; do
         xprop -f _GTK_THEME_VARIANT 8u -set _GTK_THEME_VARIANT "dark" -id "$window_id"
