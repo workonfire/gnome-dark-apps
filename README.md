@@ -18,7 +18,15 @@ Also, it has less features, but more are probably coming.
 
 ## Usage
 
-Run the script by
+- If you're running **Arch Linux**, you can easily install a package:
+```sh
+curl -O https://raw.githubusercontent.com/workonfire/gnome-dark-apps/master/PKGBUILD && makepkg -si
+```
+The binary is called `dark-theme-toggle`.
+
+- Otherwise:
+
+Clone the repository, run the script by
 ```sh
 chmod +x theme.sh && ./theme.sh
 ```
