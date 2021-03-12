@@ -3,7 +3,11 @@
 config_file="$HOME/.dark-theme-app-list"
 
 if [ ! -f $config_file ]; then
-    cp app-list $config_file
+    if [ -f /usr/share/gnome-dark-apps/app-list ]; then
+        cp /usr/share/gnome-dark-apps/app-list $config_file
+    else
+        cp app-list $config_file
+    fi
     echo "Config file generated at $config_file"
     exit 0
 fi

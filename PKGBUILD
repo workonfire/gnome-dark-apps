@@ -6,6 +6,8 @@ arch=('any')
 url="https://workonfi.re"
 license=('GPL')
 depends=('xdotool')
+conflicts=('gnome-dark-apps')
+provides=('gnome-dark-apps')
 source=("${pkgname}"::git+https://github.com/workonfire/gnome-dark-apps.git)
 md5sums=('SKIP')
 
@@ -16,5 +18,6 @@ pkgver() {
 
 package() {
 	install -Dm755 "${srcdir}"/"${pkgname}"/theme.sh "${pkgdir}"/usr/bin/dark-theme-toggle
+	install -Dm644 "${srcdir}"/"${pkgname}"/app-list "${pkgdir}"/usr/share/gnome-dark-apps/app-list
 	install -Dm644 "${srcdir}"/"${pkgname}"/LICENSE "${pkgdir}"/usr/share/licenses/"${pkgname}"/LICENSE
 }

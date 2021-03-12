@@ -20,7 +20,7 @@ Also, it has less features, but more are probably coming.
 
 - If you're running **Arch Linux**, you can easily install a package:
 ```sh
-curl -O https://raw.githubusercontent.com/workonfire/gnome-dark-apps/master/PKGBUILD && makepkg -si
+mkdir gnome-dark-apps && cd gnome-dark-apps && curl -O https://raw.githubusercontent.com/workonfire/gnome-dark-apps/master/PKGBUILD && makepkg -si
 ```
 The binary is called `dark-theme-toggle`.
 
