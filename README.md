@@ -18,9 +18,9 @@ Also, it has less features, but more are probably coming.
 
 ## Usage
 
-- If you're running **Arch Linux**, you can easily install a package:
+- If you're running **Arch Linux**, you can easily install a package from [AUR](https://aur.archlinux.org/packages/gnome-dark-apps-git)
 ```sh
-mkdir gnome-dark-apps && cd gnome-dark-apps && curl -O https://raw.githubusercontent.com/workonfire/gnome-dark-apps/master/PKGBUILD && makepkg -si
+yay -S gnome-dark-apps-git
 ```
 The binary is called `dark-theme-toggle`.
 
